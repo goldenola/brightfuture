@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-<form onsubmit="processForm(e)">
-    Name: <input type="text">
-    <input type="submit" value="Send">
-</form>    
-<script>
-    function processForm(e) {
-        e.preventDefault();
-        alert('Form submitted');
-    }
-</script>
 
+<body>
+    <form onsubmit="processForm(event)">
+        Name: <input type="text">
+        <input type="submit" value="Send">
+    </form>
+    <script>
+        function processForm(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        }
+        // document.querySelector('form').addEventListener('submit', processForm);
+    </script>
 </body>
+
 </html>
